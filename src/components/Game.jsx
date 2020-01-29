@@ -5,7 +5,7 @@ class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      deleteButton: false
+      button: false
     };
 
     this.handledeleteButtonClick = this.handledeleteButtonClick.bind(this);
@@ -18,8 +18,8 @@ class Game extends React.Component {
     return (
       <div>
         <button onClick={this.handledeleteButtonClick}>
-          Click to delete the game{" "}
-          {this.state.deleteButton ? "DELETE" : "RE-ADD"}
+          This game is{" "}
+          {this.state.deleteButton ? "out of stock" : "available"}
         </button>
         <img
           src={this.props.gameData.background_image}
