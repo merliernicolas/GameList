@@ -8,18 +8,18 @@ class Game extends React.Component {
       button: false
     };
 
-    this.handledeleteButtonClick = this.handledeleteButtonClick.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
   }
 
-  handledeleteButtonClick() {
-    this.setState({ deleteButton: !this.state.deleteButton });
+  handleButtonClick() {
+    this.setState({ button: !this.state.button });
   }
   render() {
     return (
       <div>
-        <button onClick={this.handledeleteButtonClick}>
+        <button onClick={this.handleButtonClick}>
           This game is{" "}
-          {this.state.deleteButton ? "out of stock" : "available"}
+          {this.state.button ? "out of stock" : "available"}
         </button>
         <img
           src={this.props.gameData.background_image}
